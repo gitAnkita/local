@@ -25,6 +25,12 @@ public class TestController {
     @Autowired
     private Producer producer;
 
+    @RequestMapping("/test")
+    public String test(){
+        return "test program";
+    }
+
+
     @RequestMapping("/parallel-run")
     public String parallelRun(@RequestParam(defaultValue = "1") Integer count){
 
