@@ -1,13 +1,10 @@
-com/paytm/local/common/ONLINE_REFUND_RESPONSE.class
 com/paytm/local/controller/TestController.class
 com/paytm/local/datasource/repository/AuditRepository.class
 com/paytm/local/config/KafkaConfig.class
 com/paytm/local/Initalizer.class
 com/paytm/local/datasource/dataservice/impl/UserDataServiceImpl.class
 com/paytm/local/kafka/Consumer.class
-com/paytm/local/common/TestUtils.class
 com/paytm/local/config/KafkaConsumerConfig.class
-com/paytm/local/common/ONLINE_REFUND_TXN_STATUS.class
 com/paytm/local/listeners/AuditListener$1.class
 com/paytm/local/datasource/model/Audit.class
 com/paytm/local/datasource/repository/UserRepository.class

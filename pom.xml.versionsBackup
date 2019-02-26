@@ -6,7 +6,7 @@
 
     <groupId>com.paytm</groupId>
     <artifactId>local</artifactId>
-    <version>master</version>
+    <version>version</version>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
