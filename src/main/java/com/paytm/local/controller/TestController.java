@@ -24,7 +24,7 @@ public class TestController {
     private Producer producer;
 
     @RequestMapping("/testA")
-    @MethodExceptionHandler(adviceClass = TestMethodAAdvice.class)
+    @MethodExceptionHandler(assignableAdviceType = TestMethodAAdvice.class)
     public String testA(@RequestParam(defaultValue = "0") Integer input){
         if(input == 1){
             throw new ArithmeticException("/ by 0");

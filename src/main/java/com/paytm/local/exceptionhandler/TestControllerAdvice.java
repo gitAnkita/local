@@ -13,6 +13,14 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 @Configuration
 public class TestControllerAdvice {
 
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
+    @ExceptionHandler(Exception.class)
+    public String handleException(Exception exception) {
+
+        System.out.println("TestControllerAdvice Exception - "+exception.getClass());
+        return "TestControllerAdvice Exception";
+    }
+
     @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(ArithmeticException.class)
     public String handleException(ArithmeticException exception) {
@@ -21,12 +29,6 @@ public class TestControllerAdvice {
         return "TestControllerAdvice ArithmeticException";
     }
 
-    @ResponseStatus(HttpStatus.OK)
-    @ExceptionHandler(Exception.class)
-    public String handleException(Exception exception) {
 
-        System.out.println("TestControllerAdvice Exception - " + exception.getClass());
-        return "TestControllerAdvice Exception";
-    }
 
 }
