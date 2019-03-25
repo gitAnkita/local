@@ -11,14 +11,14 @@ import org.springframework.stereotype.Component;
 @Component
 public class Consumer {
 
-    @KafkaListener(topics = "test",containerFactory = "kafkaListenerContainerFactory")
-    public void listenWithHeaders(
-            ConsumerRecord<String, ?> record, Acknowledgment ack) {
-        System.out.println(
-                "Received Message: " + record.value());
-
-        ack.acknowledge();
-
-    }
+//    @KafkaListener(topics = "test",containerFactory = "kafkaListenerContainerFactory")
+//    public void listenWithHeaders(
+//            ConsumerRecord<String, ?> record, Acknowledgment ack) {
+//        System.out.println(
+//                "Received Message: " + record.value());
+//
+//        ack.acknowledge();
+//
+//    }
 
 }

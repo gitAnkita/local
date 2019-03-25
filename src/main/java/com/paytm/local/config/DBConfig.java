@@ -41,7 +41,7 @@ public class DBConfig {
 
 	@Primary
 	@Bean(name = "localHikariConfig")
-	@ConfigurationProperties(prefix = "local.datasource")
+	@ConfigurationProperties(prefix = "spring.datasource")
 	public HikariConfig hikariConfig(@Qualifier("metricRegistry") MetricRegistry metricRegistry) {
 		HikariConfig hikariConfig = new HikariConfig();
 		hikariConfig.setMetricRegistry(metricRegistry);

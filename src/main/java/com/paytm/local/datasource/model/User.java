@@ -1,6 +1,7 @@
 package com.paytm.local.datasource.model;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.paytm.local.dto.Auditable;
 import com.paytm.local.listeners.AuditListener;
 import lombok.Data;
 import org.hibernate.annotations.DynamicInsert;
@@ -16,7 +17,7 @@ import java.util.Date;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 @EntityListeners(AuditListener.class)
-public class User implements Serializable {
+public class User implements Serializable, Auditable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -39,4 +40,8 @@ public class User implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date updatedOn;
 
+    @Override
+    public String getEntityId() {
+        return this.id.toString();
+    }
 }

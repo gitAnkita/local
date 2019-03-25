@@ -1,19 +1,17 @@
 package com.paytm.local.controller;
 
+import com.paytm.local.exceptionhandler.MethodExceptionHandler;
+import com.paytm.local.exceptionhandler.TestMethodAAdvice;
 import com.paytm.local.datasource.dataservice.UserDataService;
 import com.paytm.local.datasource.model.User;
 import com.paytm.local.dto.MyRunnable;
-import com.paytm.local.dto.UserDetailsDTO;
 import com.paytm.local.kafka.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.info.GitProperties;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 @RestController
 @RequestMapping("/local")
@@ -25,10 +23,33 @@ public class TestController {
     @Autowired
     private Producer producer;
 
-    @RequestMapping("/test")
-    public String test(){
-        return "test program";
+    @RequestMapping("/testA")
+    @MethodExceptionHandler(adviceClass = TestMethodAAdvice.class)
+    public String testA(@RequestParam(defaultValue = "0") Integer input){
+        if(input == 1){
+            throw new ArithmeticException("/ by 0");
+        }
+
+        if(input == 2){
+            throw new NullPointerException("/ by 0");
+        }
+
+        return "testA success";
     }
+
+    @RequestMapping("/testB")
+    public String testB(@RequestParam(defaultValue = "0") Integer input){
+        if(input == 1){
+            throw new ArithmeticException("/ by 0");
+        }
+
+        if(input == 2){
+            throw new NullPointerException("/ by 0");
+        }
+
+        return "testB success";
+    }
+
 
 
     @RequestMapping("/parallel-run")
