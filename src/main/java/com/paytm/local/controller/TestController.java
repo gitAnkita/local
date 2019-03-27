@@ -1,10 +1,11 @@
 package com.paytm.local.controller;
 
-import com.paytm.local.exceptionhandler.MethodExceptionHandler;
-import com.paytm.local.exceptionhandler.TestMethodAAdvice;
 import com.paytm.local.datasource.dataservice.UserDataService;
 import com.paytm.local.datasource.model.User;
 import com.paytm.local.dto.MyRunnable;
+import com.paytm.local.exceptionhandler.MethodAdvice;
+import com.paytm.local.exceptionhandler.TestMethodAAdvice;
+import com.paytm.local.exceptionhandler.TestMethodBAdvice;
 import com.paytm.local.kafka.Producer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -24,7 +25,7 @@ public class TestController {
     private Producer producer;
 
     @RequestMapping("/testA")
-    @MethodExceptionHandler(assignableAdviceType = TestMethodAAdvice.class)
+    @MethodAdvice(assignableAdviceTypes = {TestMethodAAdvice.class, TestMethodBAdvice.class})
     public String testA(@RequestParam(defaultValue = "0") Integer input){
         if(input == 1){
             throw new ArithmeticException("/ by 0");
@@ -37,6 +38,7 @@ public class TestController {
         return "testA success";
     }
 
+    @MethodAdvice(assignableAdviceTypes = {TestMethodBAdvice.class})
     @RequestMapping("/testB")
     public String testB(@RequestParam(defaultValue = "0") Integer input){
         if(input == 1){
@@ -48,6 +50,19 @@ public class TestController {
         }
 
         return "testB success";
+    }
+
+    @RequestMapping("/testC")
+    public String testC(@RequestParam(defaultValue = "0") Integer input){
+        if(input == 1){
+            throw new ArithmeticException("/ by 0");
+        }
+
+        if(input == 2){
+            throw new NullPointerException("/ by 0");
+        }
+
+        return "testC success";
     }
 
 

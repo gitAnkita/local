@@ -1,6 +1,5 @@
 package com.paytm.local.exceptionhandler;
 
-import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
@@ -9,12 +8,10 @@ import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Component;
-import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletResponse;
-import java.io.IOException;
 import java.lang.reflect.Method;
 
 @Aspect
@@ -28,28 +25,31 @@ public class MethodExceptionHandlerAspect {
     private MethodExceptionHandlerResolver exceptionHandlerResolver;
 
     /*for any method with @annotation*/
-    @Pointcut("execution(@com.paytm.local.exceptionhandler.MethodExceptionHandler * *.*(..))")
+    @Pointcut("execution(@com.paytm.local.exceptionhandler.MethodAdvice * *.*(..))")
     public void annotatedMonitorEntityMethod() {}
 
     @Around("annotatedMonitorEntityMethod()")
     public Object annotationResolver(ProceedingJoinPoint joinPoint) throws Throwable {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         Method method = signature.getMethod();
-        MethodExceptionHandler anno = method.getAnnotation(MethodExceptionHandler.class);
+        MethodAdvice anno = method.getAnnotation(MethodAdvice.class);
 
         Object retVal = null ;
         try {
             retVal = joinPoint.proceed();
         } catch (Exception e){
-            Class adviceType = anno.assignableAdviceType();
-            java.lang.reflect.Method exceptionMethod = exceptionHandlerResolver.getExceptionHandlerMethod(adviceType,e);
+            MethodExceptionHandlerDTO methodExceptionHandlerDTO = exceptionHandlerResolver.resolveExceptionHandler(anno,e);
 
-            if(exceptionMethod == null){
+            if(methodExceptionHandlerDTO == null || methodExceptionHandlerDTO.getMethod() == null){
                 throw e;
             }
 
-            retVal = exceptionMethod.invoke(applicationContext.getBean(adviceType),e);
-            setResponseStatus(exceptionMethod);
+            retVal = methodExceptionHandlerDTO.getMethod().
+                    invoke(
+                            applicationContext.getBean(methodExceptionHandlerDTO.getAdviceType()),
+                            e
+                    );
+            setResponseStatus(methodExceptionHandlerDTO.getMethod());
 
         }
         return retVal;

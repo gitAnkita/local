@@ -7,6 +7,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.method.annotation.ExceptionHandlerMethodResolver;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -14,22 +15,27 @@ import java.util.concurrent.ConcurrentHashMap;
 public class MethodExceptionHandlerResolver {
 
     private final Map<Class<?>, ExceptionHandlerMethodResolver> exceptionHandlerCache =
-            new ConcurrentHashMap<Class<?>, ExceptionHandlerMethodResolver>(64);
+            new ConcurrentHashMap<>();
 
 
-    public Method getExceptionHandlerMethod(Class<?> handlerType, Exception exception) {
-        if (handlerType != null) {
-            ExceptionHandlerMethodResolver resolver = this.exceptionHandlerCache.get(handlerType);
+    public MethodExceptionHandlerDTO resolveExceptionHandler(MethodAdvice methodAdvice, Exception exception) {
+
+        for (Class adviceType : methodAdvice.assignableAdviceTypes()) {
+            ExceptionHandlerMethodResolver resolver = this.exceptionHandlerCache.get(adviceType);
+
             if (resolver == null) {
-                resolver = new ExceptionHandlerMethodResolver(handlerType);
-                this.exceptionHandlerCache.put(handlerType, resolver);
+                resolver = new ExceptionHandlerMethodResolver(adviceType);
+                this.exceptionHandlerCache.put(adviceType, resolver);
             }
+
             Method method = resolver.resolveMethod(exception);
-            if (method != null) {
-                return method;
+            if(method != null){
+                MethodExceptionHandlerDTO handlerDTO = new MethodExceptionHandlerDTO();
+                handlerDTO.setMethod(method);
+                handlerDTO.setAdviceType(adviceType);
+                return handlerDTO;
             }
         }
-        System.out.println("Method not found");
 
         return null;
     }

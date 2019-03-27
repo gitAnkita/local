@@ -2,8 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a7aea702-3c53-49f3-ba06-0d81f3275ee9" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestMethodBAdvice.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/paytm/local/exceptionhandler/MethodAdvice.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/paytm/local/exceptionhandler/MethodExceptionHandlerDTO.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/target/classes/com/paytm/local/exceptionhandler/TestMethodBAdvice.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paytm/local/controller/TestController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paytm/local/controller/TestController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandler.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerAspect.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerAspect.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerResolver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerResolver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestMethodAAdvice.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestMethodAAdvice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paytm/local/controller/TestController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paytm/local/controller/TestController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paytm/local/exceptionhandler/MethodExceptionHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paytm/local/exceptionhandler/MethodExceptionHandlerAspect.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paytm/local/exceptionhandler/MethodExceptionHandlerAspect.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paytm/local/exceptionhandler/MethodExceptionHandlerResolver.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paytm/local/exceptionhandler/MethodExceptionHandlerResolver.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/paytm/local/exceptionhandler/TestMethodAAdvice.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/paytm/local/exceptionhandler/TestMethodAAdvice.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -17,9 +32,9 @@
     <session id="-727268848">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="21" />
+          <entry key="project.closed" value="22" />
           <entry key="project.open.time.0" value="2" />
-          <entry key="project.open.time.1" value="9" />
+          <entry key="project.open.time.1" value="10" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.2" value="5" />
           <entry key="project.open.time.3" value="1" />
@@ -27,13 +42,13 @@
           <entry key="project.open.time.34" value="1" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.opened" value="23" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="class" value="11" />
-          <entry key="java" value="312" />
+          <entry key="java" value="342" />
           <entry key="properties" value="19" />
           <entry key="sql" value="5" />
           <entry key="xml" value="12" />
@@ -42,7 +57,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="11" />
-          <entry key="JAVA" value="312" />
+          <entry key="JAVA" value="342" />
           <entry key="Properties" value="19" />
           <entry key="SQL" value="5" />
           <entry key="XML" value="12" />
@@ -50,8 +65,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="dummy" value="66" />
-          <entry key="java" value="5485" />
+          <entry key="dummy" value="77" />
+          <entry key="java" value="6301" />
           <entry key="properties" value="368" />
           <entry key="sql" value="39" />
           <entry key="txt" value="9" />
@@ -60,8 +75,8 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="5485" />
-          <entry key="PLAIN_TEXT" value="75" />
+          <entry key="JAVA" value="6301" />
+          <entry key="PLAIN_TEXT" value="86" />
           <entry key="Properties" value="368" />
           <entry key="SQL" value="39" />
           <entry key="XML" value="310" />
@@ -70,29 +85,7 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerAspect.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="332">
-              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.11.RELEASE/spring-core-4.3.11.RELEASE-sources.jar!/org/springframework/core/annotation/AnnotationAwareOrderComparator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="84" column="36" lean-forward="true" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -104,8 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getAutowireCapableBeanFactory</find>
-      <find>AMOUNT_NULL</find>
       <find>PAYEE_NAME_NULL</find>
       <find>PAYER_VA_NULL</find>
       <find>MERCHANT_TRANSACTION_ID_NULL</find>
@@ -134,6 +125,8 @@
       <find>senderr</find>
       <find>exceptionMethod</find>
       <find>AnnotationAwareOrderComparator.sort</find>
+      <find>@me</find>
+      <find>mappedMethods</find>
     </findStrings>
     <replaceStrings>
       <replace>entityManagerFactory</replace>
@@ -148,9 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/datasource/repository/UserRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/dto/MyRunnable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/datasource/repository/local2/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/datasource/repository/local/UserRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/config/local2Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/datasource/model/Audit.java" />
@@ -180,12 +170,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/config/DBConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/listeners/AuditListener.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/common/TestUtils.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/annotations/ControllerMethodAdvice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/annotations/RestControllerMethod.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/kafka/Consumer.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/Initalizer.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/controller/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/annotations/MethodExceptionHandlerAdvice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/advice/TestControllerAdvice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/annotations/MethodExceptionHandler.java" />
@@ -193,12 +181,17 @@
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/annotations/ExceptionHandlerAspect.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/ExceptionHandlerAspect.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/ExceptionHandlerMethodResolver.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodAdvice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestMethodAAdvice.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestControllerAdvice.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandler.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodAdvices.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerDTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/controller/TestController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerAspect.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodAdvice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestMethodBAdvice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestMethodAAdvice.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/paytm/local/common/TestUtils.java" />
       </list>
     </option>
   </component>
@@ -275,6 +268,21 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="local" type="b2602c69:ProjectViewProjectNode" />
+              <item name="local" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="local" type="b2602c69:ProjectViewProjectNode" />
+              <item name="local" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="local" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -285,7 +293,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="sql&#9;PSI&#9;JAVA://org.apache.tomcat.jdbc.pool.interceptor.StatementDecoratorInterceptor.StatementProxy#sql&#10;appli&#9;FILE&#9;file:///Users/ankitagupta/IdeaProjects/local/src/main/resources/application.properties" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553539708308" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553667361779" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
@@ -310,11 +318,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Application">
+  <component name="RunManager" selected="Application.TestUtils">
     <configuration name="Application" type="Application" factoryName="Application">
       <option name="MAIN_CLASS_NAME" value="com.paytm.local.LocalApplication" />
       <module name="local" />
       <option name="VM_PARAMETERS" value="-Dspring.profiles.active=local" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.paytm.local.common.TestUtils" />
+      <module name="local" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=local" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.paytm.local.common.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -356,7 +378,13 @@
     <list>
       <item itemvalue="Application.Application" />
       <item itemvalue="Maven.LocalApplication" />
+      <item itemvalue="Application.TestUtils" />
     </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestUtils" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -372,10 +400,9 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2180937" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22132471" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -385,7 +412,7 @@
       <window_info anchor="bottom" id="Thumbnails" order="0" weight="0.3289256" />
       <window_info anchor="bottom" id="Message" order="1" />
       <window_info anchor="bottom" id="Find" order="2" weight="0.3260274" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4983845" weight="0.3328767" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.4983845" visible="true" weight="0.3328767" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.4041096" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -404,7 +431,7 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.055735055" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.21486267" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2180937" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -446,14 +473,8 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerResolver.java</url>
-          <line>20</line>
-          <properties />
-          <option name="timeStamp" value="16" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerAspect.java</url>
-          <line>50</line>
+          <line>46</line>
           <properties />
           <option name="timeStamp" value="19" />
         </line-breakpoint>
@@ -505,42 +526,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/src.zip!/java/lang/Math.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="642" column="25" selection-start-line="642" selection-start-column="25" selection-end-line="642" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/common/TestUtils.java" />
-    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/src.zip!/java/lang/annotation/Documented.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="41" column="18" selection-start-line="41" selection-start-column="18" selection-end-line="41" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
-          <caret line="31" column="5" lean-forward="true" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/kafka/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="7" lean-forward="true" selection-start-line="13" selection-start-column="6" selection-end-line="21" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/kafka/Producer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-247">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/listeners/AuditListener.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -629,10 +614,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-836">
           <caret line="65" column="11" selection-start-line="65" selection-start-column="11" selection-end-line="65" selection-end-column="11" />
-          <folding>
-            <element signature="e#2732#2733#0" expanded="true" />
-            <element signature="e#2761#2762#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -647,17 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="51" column="11" selection-start-line="51" selection-start-column="11" selection-end-line="51" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodAdvice.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -689,36 +659,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.11.RELEASE/spring-web-4.3.11.RELEASE-sources.jar!/org/springframework/web/method/annotation/ExceptionHandlerMethodResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
-          <folding>
-            <element signature="e#4352#4353#0" expanded="true" />
-            <element signature="e#4395#4396#0" expanded="true" />
-            <element signature="e#5848#5876#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestMethodAAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.11.RELEASE/spring-web-4.3.11.RELEASE-sources.jar!/org/springframework/http/ResponseEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="616">
           <caret line="84" column="11" selection-start-line="84" selection-start-column="11" selection-end-line="84" selection-end-column="11" />
-          <folding>
-            <element signature="e#2964#2965#0" expanded="true" />
-            <element signature="e#2995#2996#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -764,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/controller/TestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="26" column="58" selection-start-line="26" selection-start-column="41" selection-end-line="26" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-aop/4.3.11.RELEASE/spring-aop-4.3.11.RELEASE-sources.jar!/org/springframework/aop/framework/CglibAopProxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -806,27 +743,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestControllerAdvice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="19" column="58" selection-start-line="19" selection-start-column="58" selection-end-line="19" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="12" selection-start-line="15" selection-start-column="12" selection-end-line="15" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#635#677#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -855,24 +771,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerAspect.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="332">
-          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.11.RELEASE/spring-core-4.3.11.RELEASE-sources.jar!/org/springframework/core/OrderComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="137" column="22" selection-start-line="137" selection-start-column="22" selection-end-line="137" selection-end-column="22" />
-          <folding>
-            <element signature="e#4631#4632#0" expanded="true" />
-            <element signature="e#4705#4706#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -880,6 +782,126 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="526">
           <caret line="84" column="36" lean-forward="true" selection-start-line="84" selection-start-column="36" selection-end-line="84" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodAdvices.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerDTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/src.zip!/java/util/concurrent/ConcurrentHashMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="13249">
+          <caret line="835" column="11" selection-start-line="835" selection-start-column="11" selection-end-line="835" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="35" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestControllerAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="15" column="37" lean-forward="true" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestMethodBAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="52" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.11.RELEASE/spring-web-4.3.11.RELEASE-sources.jar!/org/springframework/web/method/annotation/ExceptionHandlerMethodResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="64" column="78" selection-start-line="64" selection-start-column="58" selection-end-line="64" selection-end-column="78" />
+          <folding>
+            <element signature="e#4352#4353#0" expanded="true" />
+            <element signature="e#4395#4396#0" expanded="true" />
+            <element signature="e#5848#5876#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/TestMethodAAdvice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="14" column="31" selection-start-line="14" selection-start-column="31" selection-end-line="14" selection-end-column="31" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/controller/TestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="974">
+          <caret line="64" column="21" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/exceptionhandler/MethodExceptionHandlerAspect.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="274">
+          <caret line="51" column="16" selection-start-line="51" selection-start-column="16" selection-end-line="51" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="1957" column="18" selection-start-line="1957" selection-start-column="18" selection-end-line="1957" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home/src.zip!/java/lang/Character.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="4536" column="11" selection-start-line="4536" selection-start-column="11" selection-end-line="4536" selection-end-column="11" />
+          <folding>
+            <element signature="e#151504#151505#0" expanded="true" />
+            <element signature="e#151538#151539#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/paytm/local/common/TestUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="16" column="20" lean-forward="true" selection-start-line="16" selection-start-column="20" selection-end-line="16" selection-end-column="20" />
+          <folding>
+            <element signature="e#382#383#0" expanded="true" />
+            <element signature="e#455#456#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

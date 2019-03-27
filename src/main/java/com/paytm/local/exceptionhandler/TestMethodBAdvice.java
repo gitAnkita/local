@@ -8,14 +8,20 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 
 @Component
 @ControllerAdvice
-public class TestMethodAAdvice {
+public class TestMethodBAdvice {
 
-    @ResponseStatus(HttpStatus.OK)
+    @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(ArithmeticException.class)
     public Object handleException(ArithmeticException e) {
-        System.out.println("TestMethodAAdvice ArithmeticException - "+e.getClass());
-        return "TestMethodAAdvice ArithmeticException";
+        System.out.println("TestMethodBAdvice ArithmeticException - "+e.getClass());
+        return "TestMethodBAdvice ArithmeticException";
     }
 
+    @ResponseStatus(HttpStatus.OK)
+    @ExceptionHandler(Exception.class)
+    public Object handleException(Exception e) {
+        System.out.println("TestMethodBAdvice Exception - "+e.getClass());
+        return "TestMethodBAdvice Exception";
+    }
 
 }
